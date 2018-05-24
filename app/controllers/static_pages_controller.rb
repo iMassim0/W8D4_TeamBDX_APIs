@@ -4,6 +4,14 @@ class StaticPagesController < ApplicationController
 
   end
 
+  def google
+
+  end
+
+  def twitch
+
+  end
+
   private
 
   def params_position

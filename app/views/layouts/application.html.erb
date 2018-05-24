@@ -7,14 +7,19 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <link rel="icon" href="https://www.buildwithchrome.com/img/v2/heres-a-spot.png" />
+    <link rel="icon" href='https://help.apiary.io/images/swagger-logo.png' />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <% if current_page?(google_path_url) %>
+    <%= javascript_include_tag 'google', 'data-turbolinks-track': 'reload' %>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2PeYc__pHFtlxJBR3__YDtIy62BqOFEk&callback=initMap">
     </script>
+    <% elsif current_page?(twitch_path_url) %>
+    <% end %>
+
   </head>
 
-  <body>
+  <body onLoad=" LoadOnce()">
     <%= render 'layouts/header' %>
     <% if flash[:notice] %>
       <%= flash[:notice] %></p>

@@ -10,11 +10,29 @@
   height: 30px;
 }
 
+
+.btn {
+  list-style: none;
+  width: 40vw;
+
+}
+
+.container-fluid {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
 .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.direct {
+  margin-top: 100px;
 }
 
 #btn {
