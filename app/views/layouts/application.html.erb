@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calc by massimo TeamBDX</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/fr/archive/9/90/20180407135848%21Calculette.png" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCu0ORaqtZ6mfakOF00kdAywDPbNQrTLFw=myMap"></script>
+
+  </head>
+
+  <body>
+    <%= render 'layouts/header' %>
+    <% if flash[:notice] %>
+      <%= flash[:notice] %></p>
+    <% end %>
+    <% if flash[:error] %>
+      <%= flash[:error] %></p>
+    <% end %>
+    <% flash[:error] = flash[:notice] = nil %>
+    <%= yield %>
+    <%= render 'layouts/footer' %>
+  </body>
+</html>

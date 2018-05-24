@@ -1,0 +1,23 @@
+// Place all the styles related to the Static_Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#navbar {
+  background-color: rgb(231,231,231);
+}
+
+#logo {
+  height: 30px;
+}
+
+#footer {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(231,231,231);
+  height: 5vh;
+}
