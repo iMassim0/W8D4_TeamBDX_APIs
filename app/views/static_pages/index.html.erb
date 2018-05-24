@@ -1,6 +1,11 @@
-<h1>My First Google Map</h1>
-
-<div id="googleMap" style="width:100%;height:400px;"></div>
-
-
-<iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJJTVmIs8nVQ0R2UDJJXf6grw&key=AIzaSyCu0ORaqtZ6mfakOF00kdAywDPbNQrTLFw" allowfullscreen></iframe>
+<div class="container">
+  <h1>My First Google <em>night</em> Map</h1>
+  <form class="form-group" >
+    <input type="text" name="latitude" id="lat" placeholder="Latitude">
+    <input type="text" name="longitude" id="lng" placeholder="Longitude">
+    <input type="text" name="message" id="msg" placeholder="Message">
+  </form>
+  <button type="submit" onclick="getLongLat()" class="btn btn-success" id="btn">Go!</button>
+  <br />
+</div>
+<div class="container" id="map">LOL</div>
