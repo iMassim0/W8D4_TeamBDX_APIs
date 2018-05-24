@@ -5,9 +5,15 @@
 </a>
   <div class=" navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
+      <% if current_page?(google_path_url) %>
       <li class="nav-item">
-        <a class="nav-link" href="<%= root_path %>">Home</a>
+        <a class="nav-link" href="<%= twitch_path_url %>">Twitch</a>
       </li>
+      <% elsif current_page?(twitch_path_url) %>
+      <li class="nav-item">
+        <a class="nav-link" href="<%= google_path_url %>">Google Maps</a>
+      </li>
+      <% end %>
       <li class="nav-item">
         <a class="nav-link" href="https://github.com/iMassim0?tab=repositories" target="_blank">by @massimo</a>
       </li>
