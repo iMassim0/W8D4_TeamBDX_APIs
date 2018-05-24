@@ -10,9 +10,10 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require google
+//= require jquery
+//= require twitch
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
-//= require_tree .
+
 //= require_self
