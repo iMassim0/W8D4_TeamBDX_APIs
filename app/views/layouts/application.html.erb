@@ -9,6 +9,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link rel="icon" href='https://help.apiary.io/images/swagger-logo.png' />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
     <% if current_page?(google_path_url) %>
     <%= stylesheet_link_tag    'static_pages', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'google', 'data-turbolinks-track': 'reload' %>
@@ -17,11 +18,11 @@
     </script>
     <% elsif current_page?(twitch_path_url) %>
     <script src="https://ajax.googleapis.com/ajax/libs/dojo/1.13.0/dojo/dojo.js"></script>
+    <%= stylesheet_link_tag    'static_pages', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag    'twitch', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'twitch', 'data-turbolinks-track': 'reload' %>
     <% elsif current_page?(root_path) %>
     <%= stylesheet_link_tag    'static_pages', media: 'all', 'data-turbolinks-track': 'reload' %>
-
     <% end %>
 
   </head>

@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  var twitchName = ["ESL_SC2", "OgamingSC2", "JimBenOfficial", "freecodecamp", "SirActionSlacks", "BrownMan", "RobotCaleb", "noobs2ninjas", "brunofin", "comster404"];
+  var twitchName = ["ESL_SC2", "OgamingSC2", "JimBenOfficial", "freecodecamp", "SirActionSlacks", "BrownMan", "RobotCaleb", "noobs2ninjas"];
   var userName = [];
   var userLogo = [];
   var userStatus = [];
@@ -17,7 +17,8 @@ $(document).ready(function() {
     $.ajax({
       type: "get",
       url: "https://api.twitch.tv/kraken/channels/" + twitchName[i],
-      headers: {"Client-ID": "9szmid9uhp4i9xpda3ienaatl9cz4s"},
+      headers: {"Client-ID": "agg3aemkiuklweojrazwhtgui9e5lx"},
+      // 9szmid9uhp4i9xpda3ienaatl9cz4s
       success: function(data) {
        userURL[i] = (data.url);
        userName[i] = ("<a href =" + userURL[i] + ">" + data.display_name + "</a>");
@@ -66,20 +67,42 @@ $(document).ready(function() {
     for (var k=0; k<userName.length; k++) {
 
     if (userOnline[k] == "Offline") {
-       onlineOrOffline = "offline-box";
+       onlineOrOffline = "danger";
       }
     if (userOnline[k] == "Online") {
-       onlineOrOffline = "online-box";
+       onlineOrOffline = "success";
       }
+    // if (userOnline[k] == "Offline") {
+    //    onlineOrOffline = "offline-box";
+    //   }
+    // if (userOnline[k] == "Online") {
+    //    onlineOrOffline = "online-box";
+    //   }
 
-      myHTML += "<div class =" + onlineOrOffline + ">";
-      myHTML += "<div class = row>";
-      myHTML += "<div class = col-xs-3>" + userLogo[k] + "</div>";
-      myHTML += "<div class = col-xs-3>" + "<h3 class = user-name>" + userName[k] + "</h3>"
-      myHTML += "<h3 class = user-online>" + userOnline[k] + "</h3>" + "</div>";
-      myHTML += "<div class = col-xs-5>" + "<h3 class = user-status><i>" + userStatus[k] + "</i></h3>" + "</div>";
-      myHTML += "</div>";
-      myHTML += "</div>";
+      myHTML += "<tr class =" + onlineOrOffline + '>'
+      myHTML += "<td>" + userLogo[k] + "</td>"
+      myHTML += "<td>" + userName[k] + "</td>"
+      myHTML += "<td>" + userOnline[k] + "</td>"
+      myHTML += "<td class='last'>" + userStatus[k] + "</td>"
+      myHTML += "</tr>";
+
+      // myHTML += "<div class =" + onlineOrOffline + ">";
+      // myHTML += "<div class = row>";
+      // myHTML += "<div class = col-xs-3>" + userLogo[k] + "</div>";
+      // myHTML += "<div class = col-xs-3>" + "<h3 class = user-name>" + userName[k] + "</h3>"
+      // myHTML += "<h3 class = user-online>" + userOnline[k] + "</h3>" + "</div>";
+      // myHTML += "<div class = col-xs-5>" + "<h3 class = user-status><i>" + userStatus[k] + "</i></h3>" + "</div>";
+      // myHTML += "</div>";
+      // myHTML += "</div>";
+
+      // myHTML += "<div class =" + onlineOrOffline + ">";
+      // myHTML += "<div class = row>";
+      // myHTML += "<div class = col-xs-3>" + userLogo[k] + "</div>";
+      // myHTML += "<div class = col-xs-3>" + "<h3 class = user-name>" + userName[k] + "</h3>"
+      // myHTML += "<h3 class = user-online>" + userOnline[k] + "</h3>" + "</div>";
+      // myHTML += "<div class = col-xs-5>" + "<h3 class = user-status><i>" + userStatus[k] + "</i></h3>" + "</div>";
+      // myHTML += "</div>";
+      // myHTML += "</div>";
 
     $("#myHTML").html(myHTML);
   };
