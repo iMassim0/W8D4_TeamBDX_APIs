@@ -4,6 +4,7 @@
 ## Projet du jour :
 
 Le projet du jour consiste à développer une application rails où l'on a utilisé deux APIs :
+
   - Google maps embed
   - Twitch (\#ShitPlease☝🏻)
 
